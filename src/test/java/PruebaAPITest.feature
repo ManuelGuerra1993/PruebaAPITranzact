@@ -1,8 +1,10 @@
 @Todo
 Feature: Pruebas de country api
 
+  #Etiquetas que se usan en el runner
   @Tranzact @todo
-  Scenario: prueba1
+    #Se ingresa la url definida, se da accesos con la key
+  Scenario: Consultar Todo
     Given url 'http://api.countrylayer.com/v2/'
     And form field access_key = 'ff392b918f120144da4b8b0c8c1e0852'
     And path 'all'
@@ -11,8 +13,9 @@ Feature: Pruebas de country api
     And print response
 
 
+    #Se ejecuta el metodo GET y se filtra por codigo de pais; y se captura el response y el status
   @Tranzact2 @todo
-  Scenario Outline: prueba2
+  Scenario Outline: Buscar con filtro
     Given url 'http://api.countrylayer.com/v2/alpha/'
     And form field access_key = 'ff392b918f120144da4b8b0c8c1e0852'
     And path '<code>'
@@ -29,8 +32,9 @@ Feature: Pruebas de country api
       | GB   | United Kingdom of Great Britain and Northern Ireland | .uk   | GBR    | 44   | London           | UK                          | Great Britain              | Europe   |
 
 
+    #Este escenario se encarga de buscar un código de pais inexistente y se captura el response y el status
   @Tranzact3 @todo
-  Scenario Outline: prueba3
+  Scenario Outline: Buscar pais con codigo inexistente
     Given url 'http://api.countrylayer.com/v2/alpha/'
     And form field access_key = 'ff392b918f120144da4b8b0c8c1e0852'
     And path '<code>'
@@ -44,6 +48,7 @@ Feature: Pruebas de country api
       | M1   | 404    | Not Found |
 
 
+    #Este metodo POST se encarga de registrar un nuevo pais
   @Tranzact4 @todo
   Scenario Outline: Registrar Pais
     Given url 'http://api.countrylayer.com/v2/alpha'
