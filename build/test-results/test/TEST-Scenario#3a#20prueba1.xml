@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: prueba1" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-10-27T20:10:58" hostname="DESKTOP-4RDBK1J" time="0.982">
+  <properties/>
+  <testcase name="Given url 'http://api.countrylayer.com/v2/'" classname="Scenario: prueba1" time="0.0"/>
+  <testcase name="And form field access_key = 'ff392b918f120144da4b8b0c8c1e0852'" classname="Scenario: prueba1" time="0.0"/>
+  <testcase name="And path 'all'" classname="Scenario: prueba1" time="0.0"/>
+  <testcase name="When method GET" classname="Scenario: prueba1" time="0.0"/>
+  <testcase name="Then status 200" classname="Scenario: prueba1" time="0.0"/>
+  <testcase name="And print response" classname="Scenario: prueba1" time="0.0"/>
+  <testcase name="classMethod" classname="Scenario: prueba1" time="1.44"/>
+  <system-out><![CDATA[15:10:58.886 [Test worker] WARN com.intuit.karate - skipping bootstrap configuration: could not find or read file: karate-config.js, prefix: CLASSPATH
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
